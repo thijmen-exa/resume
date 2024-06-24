@@ -1,0 +1,259 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const birthday = new Date(1996, 2, 10);
+const delta = Date.now() - birthday.getTime();
+const age = Math.floor(delta / 1000 / 60 / 60 / 24 / 365.25);
+---
+
+<Layout title="Thijmen Kurk - Curriculum Vitae">
+  <main class="p-10">
+    <article class="prose lg:text-justify" style="margin: 0 auto">
+      <div class="grid grid-cols-3">
+        <div class="col-span-2">
+          <h1>Thijmen J. Kurk, {age}</h1>
+          <p>
+            <i>Software Engineer & Data Scientist</i><br />
+            <i class="text-gray-400">Zwolle, The Netherlands</i><br /><br />
+            <a href="mailto:thijmen.j.kurk@gmail.com"
+              >thijmen.j.kurk@gmail.com</a
+            >
+            <br />
+            +31 6 27 404 770
+            <br />
+            Bilingual: Dutch and English
+            <br />
+            Driver License: B
+          </p>
+          <p></p>
+        </div>
+        <div>
+          <img src="/photo.png" class="rounded-full" />
+        </div>
+      </div>
+      <p>
+        I am a passionate IT professional specializing in software development and data analysis. My combination of HBO and WO education, along with practical experience, allows me to bridge the gap between theory and practice. I am always looking to learn and tackle new challenges. Beyond my technical expertise, I am driven and open in my communication, believing in the power of teamwork and knowledge sharing to achieve goals. In addition to computer science, my other passion is sports, which helps keep my mind sharp and body fit, contributing to my overall productivity and well-being. In short, my combination of technical expertise, communication skills, and personal passions makes me a versatile and enthusiastic professional who is always striving for growth and improvement.
+      </p>
+      <hr />
+      <h2>Traits and Skills</h2>
+      <div
+        class="flex gap-1 mb-3 md:overflow-visible overflow-scroll print:overflow-visible max-w-[65ch]"
+      >
+        {
+          [
+            "Critical thinker",
+            "Effective communicator",
+            "Practically minded",
+            "Autodidact",
+            "Autonomous",
+            "Team player",
+            "Patient & Disciplined",
+            "Creative",
+          ].map((x) => (
+            <span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+              {x}
+            </span>
+          ))
+        }
+      </div>
+      <div
+        class="flex gap-1 mb-3 md:overflow-visible overflow-scroll print:overflow-visible max-w-[65ch]"
+      >
+        {
+          [
+            "OOP",
+            "Functional programming",
+            "Data analysis & visualization",
+            "Applied statistics & machine learning",
+            "Architecting IT solutions",
+            "Web development",
+          ].map((x) => (
+            <span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+              {x}
+            </span>
+          ))
+        }
+      </div>
+      <hr />
+      <h2>Languages and Technologies</h2>
+      <div>
+        <div
+          class="flex gap-1 mb-3 md:overflow-visible overflow-scroll print:overflow-visible max-w-[65ch]"
+        >
+          {
+            [
+              "Python",
+              "Azure DevOps",
+              "Scala",
+              "Java",
+              "SQL",
+              "TypeScript & JavaScript",
+              "R",
+              "HTML & CSS",
+              "C/C++",
+              "PHP",
+              "Rust",
+              "Regex",
+            ].map((x) => (
+              <span class="inline-flex items-center rounded-md bg-gray-50 bg-opacity-70 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+                {x}
+              </span>
+            ))
+          }
+        </div>
+        <div
+          class="flex gap-1 mb-3 md:overflow-visible overflow-scroll print:overflow-visible max-w-[65ch]"
+        >
+          {
+            [
+              "C#",
+              "Git",
+              "Pandas",
+              ".NET Core",
+              "React",
+              "Numpy",
+              "PyTorch",
+              "Docker",
+              "Vercel",
+              "Spark",
+              "Amazon Web Services",
+            ].map((x) => (
+              <span class="inline-flex items-center rounded-md bg-gray-50 bg-opacity-70 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+                {x}
+              </span>
+            ))
+          }
+        </div>
+        <div
+          class="flex gap-1 md:overflow-visible overflow-scroll print:overflow-visible max-w-[65ch]"
+        >
+          {
+            [
+              "Jupyter Notebooks",
+              "FastAPI",
+              "ASP.NET",
+              "Azure",
+              "UML",
+              "Spring framework",
+              "RabbitMQ",
+              "Redis",
+              "Angular",
+            ].map((x) => (
+              <span class="inline-flex items-center rounded-md bg-gray-50 bg-opacity-70 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+                {x}
+              </span>
+            ))
+          }
+        </div>
+      </div>
+
+      <p>
+        <i
+          >* Lists are ordered from left to right by proficiency, the left side
+          being most proficient.
+        </i>
+      </p>
+      <hr />
+      <h2>Education</h2>
+      <ul>
+        <li>
+          <i>2018 - 2022</i> / <strong
+            >Master Computer Science (joint degree)</strong
+          >, 8.6<br />
+          <i class="text-gray-400"
+            >Vrije Universiteit Amsterdam and University of Amsterdam</i
+          >
+          <br />
+          For my thesis, I addressed data management challenges in microservice architectures (MSAs), such as distributed transactions, data consistency, and efficient integration. I developed a system to implement distributed transactions and introduced a new layer for data consistency and integration, automatically synchronizing a relational model between services. Validated through end-to-end and manual tests, this system provides a reusable method for coordinating transactions, maintaining data consistency, and integrating data efficiently, simplifying the development and management of MSA-based systems.
+        </li>
+        <li>
+          <i>2017 - 2018</i> / <strong>Pre-Master Computer Science</strong>, 9.2<br
+          />
+          <i class="text-gray-400">Vrije Universiteit Amsterdam</i>
+        </li>
+        <li>
+          <i>2014 - 2017</i> / <strong>Bachelor HBO-ICT</strong>, 8.5<br />
+          <i class="text-gray-400">University of Applied Sciences Windesheim</i>
+        </li>
+      </ul>
+      <hr />
+      <h2>Work Experience</h2>
+      <ul>
+        <li>
+          <i>2023 - present</i> / Senior Software Developer @ <strong
+            >Suneco</strong
+          >
+          <br />
+          <i class="text-gray-400">Zwolle, The Netherlands</i><br />
+          I develop custom software projects, collaborating closely with clients. Recently, I contributed to migrating Innofeet's legacy portal from C# with ASP.NET 4.5 to .NET 8. The project involved restructuring the monolithic portal into an API and WebApp. Leading a team of two developers, I managed the transition to .NET 8, created the API, and set up OTAP environments in Azure. I developed tools to expedite the process, including one that automated converting synchronous to asynchronous functions and another that efficiently compared millions of data rows between databases to ensure system validation.
+        </li>
+
+        <li>
+          <i>2019 - present</i> / Co-founder @ <strong>Exante.ai</strong>
+          <br />
+          <i class="text-gray-400">Zwolle, The Netherlands</i><br />
+          I've led a blend of AI consultancy and software development projects at Exante.ai. Notable achievements include developing an automatic student-internship allocation system for StageMonitor using a minimum-cost flow algorithm, which automates matching students with internships in healthcare settings. I also developed <a href="https://apeelingai.com/" class="inline-flex items-center mb-0">ApeelingAI</a>, a SaaS platform with dynamic, context-aware chatbots that enhance client website engagement, which has already served more than 1,000 users. Additionally, I created <a href="https://gpt-detective.nl" class="inline-flex items-center mb-0">GPT-Detective</a>, the first European tool to detect AI-generated text in Dutch, used by over 10,000 users to scan 55,000 documents.
+        </li>
+        <li>
+          <i>2020 - 2020</i> / Intern @ <strong>Databricks</strong>
+          <br />
+          <i class="text-gray-400">Amsterdam, The Netherlands</i><br />        
+          Selected from over 1100 candidates for a project at Databricks, I conducted research to improve the Spark scheduler, focusing on interactive workloads. I optimized the existing scheduler and developed a new architecture by separating scheduler logic from RPC processing, batch processing status updates, and deploying multiple task schedulers in parallel. The goal was to achieve sub-millisecond latency by addressing key bottlenecks. Testing on a Spark OS 3.1.0 prototype revealed network delays and instability in the central RPC queue at scale. My new scheduler design, which pushed tasks to executors, improved throughput by 17x and significantly increased scheduler efficiency, achieving sub-millisecond latencies in large clusters.
+        </li>
+        <li>
+          <i>2018 - 2019</i> / Teacher Assistent @ <strong
+            >Vrije Universiteit Amsterdam</strong
+          ><br />
+          <i class="text-gray-400">Amsterdam, The Netherlands</i>
+          <br />As a Teacher Assistant for Advanced Programming and Statistical
+          Methods courses, I guided and graded Bachelor students on theoretical
+          and practical programming assignments, facilitating their learning in
+          Scala and R programming languages.
+        </li>
+        <li>
+          <i>2017 - 2018</i> / Software Engineer @ <strong>Körbler</strong>, <i class="text-gray-400">Graz, Austria</i>
+        </li>
+        <li>
+          <i>2017</i> / Bachelor Graduation Internship @ <strong>NCIM Group</strong>, <i class="text-gray-400">The Hague, The Netherlands</i>
+        </li>
+        <li>
+          <i>2017</i> / Bachelor Internship @ <strong>Körbler</strong>,  <i class="text-gray-400">Graz, Austria</i>
+        </li>
+      </ul>
+      <hr />
+      <h2>Projects & Certifications</h2>
+      <ul>
+        <li>
+          <i>2024</i> / <a
+            href="https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-engineer/"
+            class="inline-flex items-center mb-0"
+          >AI-102: Azure AI Engineer Associate</a>
+        </li>
+        <li>
+          <i>2024</i> / <a
+            href="https://learn.microsoft.com/en-us/credentials/certifications/azure-developer/"
+            class="inline-flex items-center mb-0"
+          >AZ-204: Azure Developer Associate</a>
+        </li>
+        <li>
+          <i>2019</i> / <a
+            href="https://event.cwi.nl/lsde/2022/showcase_l1.shtml"
+            class="inline-flex items-center mb-0"
+          >
+            Earth Imaging Time-Travel Animations
+          </a><br />We analyzed, processed, and visualized Landsat satellite
+          imagery, creating the LSDE Earth Viewer, a tool to observe geolocation
+          changes over time using Web Mercator projection.
+        </li><li>
+          <i>2019</i> / <a
+            href="https://github.com/GreenLab-Kebab/gl-kebab"
+            class="inline-flex items-center mb-0"
+          >
+            An Empirical Analysis of JavaScript Dead Code in the Wild
+          </a><br />We investigated the effect of JavaScript dead code on the
+          load time and energy consumption of mobile web apps.
+        </li>
+      </ul>
+    </article>
+  </main>
+</Layout>
